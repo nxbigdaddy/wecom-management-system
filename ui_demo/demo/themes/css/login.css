@@ -1,0 +1,51 @@
+@charset "utf-8";
+ol, ul{ margin: 0; padding:0; }
+html,body{ width: 100%; height: 100%; margin: 0; padding:0; background-color: #2b3749; overflow: hidden; }
+body { background: url(../images/login/bg.jpg) no-repeat center fixed; background-size:cover; }
+.loginWrap { width: 100%; height: 100%; }
+.loginWrap .bd { position:fixed; left:50%; top:50%; width:1120px; height: 580px; margin: -290px 0 0 -560px; background-color: #fff; z-index: 1; transition: .3s; }
+.logo { position:relative; width: 376px; margin:0 auto 35px; padding:30px 0 0; text-align:center; z-index: 1; transition: .3s; }
+.logo img { width: 100%; }
+.login { position:relative; width:376px; margin:0 auto; padding:0; color:#eee; z-index: 1; transition: .3s; }
+.form-group { position:relative; height: 62px; margin-bottom:12px; transition: .3s; }
+.form-group label { position: absolute; left: 0; top: 0; display:block; color: #333; width: 60px; height:62px; border-right: 1px solid #d2d5dd; font-weight:400; line-height: 62px; overflow: hidden; text-indent: -999px; font-size: 0; margin: 0; transition: .3s; }
+.form-group .form-control { width: 100%; height: 62px; margin: 0; padding:0 30px 0 82px; border-radius: 0; border:0; background:#eceff8; box-shadow: none; font-size: 16px; transition: .3s; }
+.form-group-name label { margin: 0; background: url(../images/login/01.png) no-repeat #eceff8 50%; }
+.form-group-password { margin-bottom: 20px; transition: .3s; }
+.form-group-password label { background: url(../images/login/02.png) no-repeat #eceff8 50%; }
+.form-group-code { margin-bottom: 40px; transition: .3s; }
+.form-group-code label { background: url(../images/login/04.png) no-repeat #eceff8 50%;background-size: 30px 30px; }
+.form-actions { text-align: center; }
+.form-actions .btn { width:86%; margin:0 auto; padding: 0; color:#fff; border-radius: 29px; font-size: 20px; line-height: 58px; transition: .3s; }
+.form-actions .btn { background:#1468a7; color:#fff; }
+.form-actions .btn:hover { background:#069; }
+.page-footer { position:relative; padding:30px 0 0; line-height:30px; font-size: 16px; text-align:center; z-index: 1; transition: .3s; }
+.page-footer span { padding: 0 10px; }
+.ad-left { position: relative; float: left; width: 614px; height: 580px; overflow: hidden; }
+.ad-left .mt { position: absolute; left: 38px; bottom: 17px; height: 12px; z-index: 9; }
+.ad-left .mt li { float: left; margin-right: 6px; width: 12px; height: 12px; border-radius: 100%; border:2px solid #0057e5; background-color: #c7cddf; font-size: 0; text-indent: -999px; overflow: hidden; cursor: pointer; }
+.ad-left .mt li.on { border:2px solid #eee; background-color: #c7cddf; }
+
+.cn-right { display: block; overflow: hidden; }
+
+@media only screen and (max-width: 1119px) {
+	.loginWrap .bd { width: 506px; margin-left: -253px; }
+	.ad-left { display: none; }
+}
+@media only screen and (max-width: 560px) {
+	.loginWrap .bd { width: 90%; height: 500px; margin-top: -250px; margin-left: -45%; }
+	.logo { margin-bottom:25px; padding-top:60px; }
+	.form-group,.form-group label,.form-group .form-control { height: 52px; }
+	.form-group-name label,.form-group-password label { background-size: 42px; }
+	.form-group-password { margin-bottom: 30px; }
+	.form-actions .btn { font-size: 16px; line-height: 48px; }
+	.page-footer { padding:36px 0 0; font-size: 14px; }
+ }
+ @media only screen and (max-width: 414px) {
+	.loginWrap .bd { height: 440px; margin-top: -220px; }
+	.logo { width: auto; margin-bottom:25px; padding: 40px 10% 0; }
+	.login { width: auto; padding: 0 10%; }
+	.form-actions .btn { font-size: 14px; line-height: 42px; }
+	.page-footer { padding:20px 0 0; font-size: 14px; line-height: 20px; }
+	.page-footer span { display: block; }
+ }

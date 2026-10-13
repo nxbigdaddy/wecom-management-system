@@ -1,0 +1,49 @@
+# ============================================================
+# 企业微信管理系统 - Apache URL 重写规则
+# ============================================================
+# 
+# 如果使用 Nginx，请参考 nginx.conf.example
+# 如果使用 Apache，启用 mod_rewrite 并放置此文件在 public/ 目录
+# 
+# ============================================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # 如果请求的不是真实存在的文件或目录，重写到 index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?/$1 [QSA,L]
+
+    # 安全检查：禁止访问敏感文件
+    RewriteRule ^(\.user\.ini|\.htaccess|\.git|\.env|\.svn|composer\.(json|lock)|schema\.sql) - [F,L,NC]
+</IfModule>
+
+# ============================================================
+# 安全头（可选，推荐生产环境启用）
+# ============================================================
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# ============================================================
+# 禁止目录浏览
+# ============================================================
+Options -Indexes
+
+# ============================================================
+# 默认首页
+# ============================================================
+DirectoryIndex index.php
+
+# ============================================================
+# PHP 设置（按需调整）
+# ============================================================
+<IfModule mod_php.c>
+    php_value upload_max_filesize 50M
+    php_value post_max_size 50M
+    php_value max_execution_time 120
+    php_value max_input_time 120
+</IfModule>

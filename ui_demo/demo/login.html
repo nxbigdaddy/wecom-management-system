@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>网站管理中心 v4.0</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta content="" name="description" />
+<meta content="" name="author" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link href="themes/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="themes/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<link href="themes/css/login-theme.css" rel="stylesheet" />
+<script src="js/md5.js"></script>
+<script language="javascript">
+	function loginCheck(form)
+	{
+		if (form.name.value == "")
+		{
+			form.name.focus();
+			return false;
+		}
+		if (form.pass.value == "")
+		{
+			form.pass.focus();
+			return false;
+		}
+		return true;
+	}
+</script>
+</head>
+<body>
+
+<div class="loginWrap">
+	<div class="bd">
+		<div class="ad-left">
+			<div class="brand">
+				<h2>网站管理后台</h2>
+				<p>高效、安全、智能的内容管理系统<br>让网站运营更轻松</p>
+			</div>
+			<div class="features">
+				<div class="feature-item">
+					<i class="fa fa-shield"></i>
+					<span>安全可靠</span>
+				</div>
+				<div class="feature-item">
+					<i class="fa fa-bolt"></i>
+					<span>高效便捷</span>
+				</div>
+				<div class="feature-item">
+					<i class="fa fa-cogs"></i>
+					<span>智能管理</span>
+				</div>
+			</div>
+		</div>
+		<div class="cn-right">
+			<div class="logo">
+				<h1>欢迎登录</h1>
+				<p>请输入您的账号信息以继续</p>
+			</div>
+			<div class="login">
+				<form class="login-form" name="form_login" action="index.html" method="get" onSubmit="return loginCheck(this);">
+					<div class="form-group form-group-name">
+						<label>用户名</label>
+						<input class="form-control" type="text" autocomplete="off" placeholder="请输入用户名" name="name" />
+					</div>
+					<div class="form-group form-group-password">
+						<label>密码</label>
+						<input class="form-control" type="password" id="YOUR_PASSWORD" autocomplete="off" placeholder="请输入密码" name="pass" />
+					</div>
+					<div class="form-group form-group-code">
+						<label>验证码</label>
+						<input name="code" type="text" maxlength="4" value="" class="form-control" placeholder="请输入验证码" />
+						<img title="点击刷新" src="themes/images/login/01.png" onclick="this.src='themes/images/login/01.png?'+Math.random();">
+					</div>
+					<div class="form-actions">
+						<button type="submit" class="btn green uppercase tijiao" style="display:none;">登录后台</button>
+						<div class="btn green uppercase aaaa" id="aaaa">登 录</div>
+					</div>
+				</form>
+				<div class="login-footer">
+					<span>忘记密码？<a href="#">联系管理员</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="themes/plugins/jquery.min.js"></script>
+<script>
+$('#aaaa').click(function(){
+	var aaa = md5($('#txtpassword').val());
+	$('#txtpassword').val(aaa);
+	$('.tijiao').click();
+})
+$(".loginWrap").keypress(function(event){
+  if(event.which === 13) { 
+      var aaa = md5($('#txtpassword').val());
+		$('#txtpassword').val(aaa);
+		$('.tijiao').click();
+   }
+})
+</script>
+</body>
+</html>

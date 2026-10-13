@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>网站管理中心 v4.0</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta content="" name="description" />
+<meta content="" name="author" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link href="themes/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="themes/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<link href="themes/plugins/uniform/css/uniform.default.css" rel="stylesheet" />
+<link href="themes/css/theme.css" rel="stylesheet" />
+<script src="js/jquery.js"></script>
+<script src="js/common.js"></script>
+</head>
+<body>
+
+<!-- 顶部导航 -->
+<div class="page-header">
+	<div class="page-header-inner clearfix">
+		<div class="page-logo"><a href="index.html"><i class="fa fa-cube" style="margin-right:8px;"></i>管理后台</a><span class="menu-toggler sidebar-toggler"></span></div>
+		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"></a>
+		<ul class="navbar-nav pull-right">
+			<li class="tooltips" data-placement="bottom" data-original-title="客户留言"><a href="message_list.html"><i class="fa fa-bell-o"></i><span class="badge badge-danger">3</span></a></li>
+			<li class="tooltips" data-placement="bottom" data-original-title="网站首页"><a href="#" target="_blank"> <i class="fa fa-home"></i> </a></li>
+			<li class="separator"></li>
+			<li class="dropdown dropdown-hover">
+				<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"><span class="username">管理员</span><img alt="" class="img-circle" src="themes/images/avatar.jpg" /></a>
+				<ul class="dropdown-menu dropdown-menu-default">
+					<li><a href="index.html"><i class="fa fa-user-md"></i>用户管理中心</a></li>
+					<li><a href="login.html" onClick="if (confirm('确定要退出吗？')) return true; else return false;"><i class="fa fa-key"></i>退出登录</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+<div class="page-container clearfix">
+	<div class="page-content-wrapper">
+
+		<!-- 左侧菜单 -->
+		<div class="page-sidebar-wrapper">
+			<div class="page-sidebar navbar-collapse collapse">
+				<ul class="page-sidebar-menu" data-slide-speed="200">
+					<li class="heading"> <i class="fa fa-navicon"></i> 栏目管理</li>
+					<li class="nav-item">
+						<a href="javascript:;" class="nav-toggle"> <i class="fa fa-list"></i> <span class="title">关于我们</span><span class="arrow"></span></a>
+						<ul class="sub-menu">
+							<li class="nav-item"><a href="info_list.html" class="nav-toggle"> <i class="fa fa-caret-right"></i> <span class="title">公司简介</span></a></li>
+							<li class="nav-item"><a href="info_list.html" class="nav-toggle"> <i class="fa fa-caret-right"></i> <span class="title">企业文化</span></a></li>
+							<li class="nav-item"><a href="info_list.html" class="nav-toggle"> <i class="fa fa-caret-right"></i> <span class="title"><b style="color: #FF6B6B">分类管理</b></span> </a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a href="javascript:;" class="nav-toggle"> <i class="fa fa-newspaper-o"></i> <span class="title">新闻动态</span><span class="arrow"></span></a>
+						<ul class="sub-menu">
+							<li class="nav-item"><a href="info_list.html" class="nav-toggle"> <i class="fa fa-caret-right"></i> <span class="title">公司新闻</span></a></li>
+							<li class="nav-item"><a href="info_list.html" class="nav-toggle"> <i class="fa fa-caret-right"></i> <span class="title">行业资讯</span></a></li>
+							<li class="nav-item"><a href="info_list.html" class="nav-toggle"> <i class="fa fa-caret-right"></i> <span class="title"><b style="color: #FF6B6B">分类管理</b></span> </a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a href="javascript:;" class="nav-toggle"> <i class="fa fa-cubes"></i> <span class="title">产品中心</span><span class="arrow"></span></a>
+						<ul class="sub-menu">
+							<li class="nav-item"><a href="info_list.html" class="nav-toggle"> <i class="fa fa-caret-right"></i> <span class="title">产品系列一</span></a></li>
+							<li class="nav-item"><a href="info_list.html" class="nav-toggle"> <i class="fa fa-caret-right"></i> <span class="title">产品系列二</span></a></li>
+							<li class="nav-item"><a href="info_list.html" class="nav-toggle"> <i class="fa fa-caret-right"></i> <span class="title"><b style="color: #FF6B6B">分类管理</b></span> </a></li>
+						</ul>
+					</li>
+					<li class="heading"> <i class="fa fa-navicon"></i> 数据统计</li>
+					<li class="nav-item">
+						<a href="index.html" class="nav-toggle"> <i class="fa fa-dashboard"></i> <span class="title">数据统计面板</span></a>
+					</li>
+					<li class="heading"> <i class="fa fa-navicon"></i> 高级管理</li>
+					<li class="nav-item">
+						<a href="banner_list.html" class="nav-toggle"> <i class="fa fa-image"></i> <span class="title">Banner管理</span></a>
+					</li>
+					<li class="nav-item">
+						<a href="link_list.html" class="nav-toggle"> <i class="fa fa-link"></i> <span class="title">友情链接</span></a>
+					</li>
+					<li class="heading"> <i class="fa fa-navicon"></i> 系统管理</li>
+					<li class="nav-item open">
+						<a href="javascript:;" class="nav-toggle"><i class="fa fa-cogs"></i><span class="title">系统功能</span><span class="arrow open"></span> </a>
+						<ul class="sub-menu" style="display:block">
+							<li class="nav-item"><a href="config_base.html" class="nav-toggle"> <i class="fa fa-sun-o"></i> <span class="title">基本设置</span></a></li>
+							<li class="nav-item active"><a href="config_advance.html" class="nav-toggle"> <i class="fa fa-wrench"></i> <span class="title">高级设置</span></a></li>
+							<li class="nav-item"><a href="admin_list.html" class="nav-toggle"> <i class="fa fa-user-plus"></i> <span class="title">管理员列表</span></a></li>
+							<li class="nav-item"><a href="record_list.html" class="nav-toggle"> <i class="fa fa-undo"></i> <span class="title">系统操作日志</span></a></li>
+						 </ul>
+					</li>
+					<li class="heading"> <i class="fa fa-navicon"></i> 个人管理</li>
+					<li class="nav-item"><a href="admin_changepass.html" class="nav-toggle"> <i class="fa fa-key"></i> <span class="title">修改口令</span></a></li>
+					<li class="nav-item"><a href="login.html" class="nav-toggle" onClick="if (confirm('确定要退出吗？')) return true; else return false;"> <i class="fa fa-sign-out"></i> <span class="title">退出系统</span></a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 主内容区域 -->
+		<div class="page-content">
+			<ul class="page-breadcrumb breadcrumb">
+				<li><i class="fa fa-home"></i><a href="index.html">首页</a></li>
+				<li><i class="fa fa-angle-right"></i>系统管理</li>
+				<li><i class="fa fa-angle-right"></i><span class="active">高级设置</span></li>
+			</ul>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="portlet light edit-panel">
+						<div class="portlet-title">
+							<div class="caption"> <i class="fa fa-wrench"></i> <span class="caption-subject uppercase">高级设置</span></div>
+						</div>
+						<div class="portlet-body">
+							<form class="form" name="configForm" action="config_advance.html" method="post">
+								<div class="form-body">
+
+									<!-- 显示设置 -->
+									<div class="form-section">
+										<div class="form-section-title"><i class="fa fa-desktop"></i><span>显示设置</span></div>
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-4">
+													<label class="control-label">每页显示条数</label>
+													<div class="input-icon">
+														<i class="fa fa-list-ol tooltips" data-placement="top" data-original-title="列表每页显示数量"></i>
+														<input type="text" class="form-control" name="page_size" value="20">
+													</div>
+												</div>
+												<div class="col-md-4">
+													<label class="control-label">缩略图宽度</label>
+													<div class="input-icon">
+														<i class="fa fa-arrows-h tooltips" data-placement="top" data-original-title="缩略图宽度（像素）"></i>
+														<input type="text" class="form-control" name="thumb_width" value="300">
+													</div>
+												</div>
+												<div class="col-md-4">
+													<label class="control-label">缩略图高度</label>
+													<div class="input-icon">
+														<i class="fa fa-arrows-v tooltips" data-placement="top" data-original-title="缩略图高度（像素）"></i>
+														<input type="text" class="form-control" name="thumb_height" value="200">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-6">
+													<label class="control-label">水印位置</label>
+													<select name="watermark_position" class="form-control">
+														<option value="0">不开启水印</option>
+														<option value="1">左上角</option>
+														<option value="2" selected>右下角</option>
+														<option value="3">居中</option>
+													</select>
+												</div>
+												<div class="col-md-6">
+													<label class="control-label">水印透明度</label>
+													<div class="input-icon">
+														<i class="fa fa-tint tooltips" data-placement="top" data-original-title="0-100，值越小越透明"></i>
+														<input type="text" class="form-control" name="watermark_opacity" value="80">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- 功能开关 -->
+									<div class="form-section">
+										<div class="form-section-title"><i class="fa fa-toggle-on"></i><span>功能开关</span></div>
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-3 col-sm-6">
+													<label class="control-label">开启留言功能</label>
+													<div class="radio-group">
+														<label><input type="radio" name="enable_message" value="1" checked /> 开启</label>
+														<label><input type="radio" name="enable_message" value="0" /> 关闭</label>
+													</div>
+												</div>
+												<div class="col-md-3 col-sm-6">
+													<label class="control-label">开启评论审核</label>
+													<div class="radio-group">
+														<label><input type="radio" name="comment_audit" value="1" checked /> 开启</label>
+														<label><input type="radio" name="comment_audit" value="0" /> 关闭</label>
+													</div>
+												</div>
+												<div class="col-md-3 col-sm-6">
+													<label class="control-label">开启游客访问</label>
+													<div class="radio-group">
+														<label><input type="radio" name="guest_visit" value="1" checked /> 开启</label>
+														<label><input type="radio" name="guest_visit" value="0" /> 关闭</label>
+													</div>
+												</div>
+												<div class="col-md-3 col-sm-6">
+													<label class="control-label">开启统计代码</label>
+													<div class="radio-group">
+														<label><input type="radio" name="enable_stats" value="1" checked /> 开启</label>
+														<label><input type="radio" name="enable_stats" value="0" /> 关闭</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- 邮件设置 -->
+									<div class="form-section">
+										<div class="form-section-title"><i class="fa fa-envelope-o"></i><span>邮件设置</span></div>
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-6">
+													<label class="control-label">SMTP服务器</label>
+													<div class="input-icon">
+														<i class="fa fa-server tooltips" data-placement="top" data-original-title="SMTP服务器地址"></i>
+														<input type="text" class="form-control" name="smtp_host" value="smtp.example.com">
+													</div>
+												</div>
+												<div class="col-md-3">
+													<label class="control-label">SMTP端口</label>
+													<div class="input-icon">
+														<i class="fa fa-plug tooltips" data-placement="top" data-original-title="SMTP端口"></i>
+														<input type="text" class="form-control" name="smtp_port" value="465">
+													</div>
+												</div>
+												<div class="col-md-3">
+													<label class="control-label">加密方式</label>
+													<select name="smtp_secure" class="form-control">
+														<option value="ssl" selected>SSL</option>
+														<option value="tls">TLS</option>
+														<option value="none">不加密</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-6">
+													<label class="control-label">发件人邮箱</label>
+													<div class="input-icon">
+														<i class="fa fa-envelope tooltips" data-placement="top" data-original-title="发件人邮箱"></i>
+														<input type="text" class="form-control" name="smtp_user" value="noreply@example.com">
+													</div>
+												</div>
+												<div class="col-md-6">
+													<label class="control-label">发件人密码</label>
+													<div class="input-icon">
+														<i class="fa fa-lock tooltips" data-placement="top" data-original-title="邮箱密码或授权码"></i>
+														<input type="password" class="YOUR_PASSWORD" name="smtp_pass" value="********">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- 统计代码 -->
+									<div class="form-section">
+										<div class="form-section-title"><i class="fa fa-code"></i><span>统计代码</span></div>
+										<div class="form-group">
+											<label class="control-label">第三方统计代码</label>
+											<textarea name="stats_code" class="form-control" rows="5">&lt;script&gt;
+// 百度统计或其他第三方统计代码
+&lt;/script&gt;</textarea>
+											<p class="help-block" style="color:#A0AEC0;font-size:12px;margin-top:6px;">支持HTML/JS代码，将自动插入到页面底部</p>
+										</div>
+									</div>
+
+								</div>
+								<div class="form-actions">
+									<button type="submit" class="btn blue"><i class="fa fa-check" style="margin-right:6px"></i>保存设置</button>
+									<button type="reset" class="btn default"><i class="fa fa-refresh" style="margin-right:6px"></i>重置</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 页脚 -->
+<div class="page-footer">
+	<div class="page-footer-inner"> 2026 &copy; 网站管理后台 v4.0 </div>
+</div>
+
+<script src="themes/plugins/jquery.min.js"></script>
+<script src="themes/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="themes/plugins/uniform/jquery.uniform.min.js"></script>
+<script src="themes/js/app.min.js" type="text/javascript"></script>
+<script src="themes/js/layout.min.js" type="text/javascript"></script>
+</body>
+</html>

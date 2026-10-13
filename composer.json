@@ -1,0 +1,34 @@
+{
+    "name": "wxwork/manager",
+    "description": "企业微信管理系统 - 原生PHP全栈解决方案",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Wxwork\\": "src/",
+            "Wxwork\\Core\\": "src/core/",
+            "Wxwork\\Api\\": "src/api/",
+            "Wxwork\\Callback\\": "src/callback/",
+            "Wxwork\\Callback\\Handlers\\": "src/callback/handlers/",
+            "Wxwork\\Models\\": "src/models/",
+            "Wxwork\\Sync\\": "src/sync/"
+        },
+        "classmap": [
+            "src/admin/",
+            "src/core/Exceptions.php"
+        ]
+    },
+    "require": {
+        "php": ">=8.0",
+        "ext-curl": "*",
+        "ext-openssl": "*",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*",
+        "ext-mbstring": "*",
+        "ext-xml": "*",
+        "ext-json": "*"
+    },
+    "suggest": {
+        "ext-redis": "推荐安装 Redis 扩展以提升 access_token 管理性能"
+    }
+}

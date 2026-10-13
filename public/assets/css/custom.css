@@ -1,0 +1,150 @@
+@charset "utf-8";
+/* ============================================================
+   自定义颜色覆盖 - 修复 theme.css 按钮配色混乱问题
+   ============================================================ */
+
+/* --- 按钮颜色修正 --- */
+.btn.blue:not(.btn-outline) {
+    color: #FFF !important;
+    background-color: #3498db !important;
+    border-color: #3498db !important;
+}
+.btn.blue:not(.btn-outline):hover,
+.btn.blue:not(.btn-outline):focus {
+    background-color: #2980b9 !important;
+    border-color: #2980b9 !important;
+}
+
+.btn.green:not(.btn-outline) {
+    color: #FFF !important;
+    background-color: #27ae60 !important;
+    border-color: #27ae60 !important;
+}
+.btn.green:not(.btn-outline):hover,
+.btn.green:not(.btn-outline):focus {
+    background-color: #219a52 !important;
+    border-color: #219a52 !important;
+}
+
+.btn.red:not(.btn-outline) {
+    color: #FFF !important;
+    background-color: #e74c3c !important;
+    border-color: #e74c3c !important;
+}
+.btn.red:not(.btn-outline):hover,
+.btn.red:not(.btn-outline):focus {
+    background-color: #c0392b !important;
+    border-color: #c0392b !important;
+}
+
+.btn.yellow:not(.btn-outline) {
+    color: #FFF !important;
+    background-color: #f39c12 !important;
+    border-color: #f39c12 !important;
+}
+.btn.yellow:not(.btn-outline):hover {
+    background-color: #e67e22 !important;
+    border-color: #e67e22 !important;
+}
+
+.btn.purple:not(.btn-outline) {
+    color: #FFF !important;
+    background-color: #9b59b6 !important;
+    border-color: #9b59b6 !important;
+}
+.btn.purple:not(.btn-outline):hover {
+    background-color: #8e44ad !important;
+    border-color: #8e44ad !important;
+}
+
+.btn.default:not(.btn-outline) {
+    color: #333 !important;
+    background-color: #ecf0f1 !important;
+    border-color: #bdc3c7 !important;
+}
+.btn.default:not(.btn-outline):hover {
+    background-color: #bdc3c7 !important;
+    border-color: #95a5a6 !important;
+    color: #333 !important;
+}
+
+/* --- btn-xs 小按钮文字可读性 --- */
+.btn-xs {
+    font-size: 12px !important;
+    padding: 3px 8px !important;
+    line-height: 1.5 !important;
+}
+
+/* --- 确保所有按钮文字白色可读 --- */
+.btn.blue, .btn.green, .btn.red, .btn.yellow, .btn.purple {
+    color: #FFF !important;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.15);
+}
+
+/* --- 标签颜色对比度增强 --- */
+.label-success {
+    background-color: #27ae60 !important;
+    color: #FFF !important;
+}
+.label-danger {
+    background-color: #e74c3c !important;
+    color: #FFF !important;
+}
+.label-warning {
+    background-color: #f39c12 !important;
+    color: #FFF !important;
+}
+.label-info {
+    background-color: #3498db !important;
+    color: #FFF !important;
+}
+.label-default {
+    background-color: #95a5a6 !important;
+    color: #FFF !important;
+}
+
+/* --- 表格操作按钮间距 --- */
+table .btn-xs {
+    margin: 0 2px;
+}
+
+/* --- 搜索框按钮 --- */
+.sch-form .btn-cont:hover .btn {
+    background-color: #2980b9 !important;
+    box-shadow: 0 4px 12px rgba(52,152,219,0.3);
+}
+
+/* --- btn-shy 工具按钮修正 --- */
+.btn-shy:hover {
+    background: #2980b9 !important;
+    box-shadow: 0 4px 12px rgba(52,152,219,0.35);
+}
+
+/* --- 分页按钮 --- */
+.pagination > .active > a,
+.pagination > .active > a:hover {
+    background-color: #3498db !important;
+    border-color: #2980b9 !important;
+    color: #FFF !important;
+}
+.pagination > li > a {
+    color: #3498db !important;
+}
+
+/* --- Modal 标题和按钮 --- */
+.modal-header {
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* --- Alert 颜色增强 --- */
+.alert-success {
+    background-color: #d4edda !important;
+    border-color: #c3e6cb !important;
+    color: #155724 !important;
+}
+.alert-danger {
+    background-color: #f8d7da !important;
+    border-color: #f5c6cb !important;
+    color: #721c24 !important;
+}

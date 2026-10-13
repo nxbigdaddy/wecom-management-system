@@ -1,0 +1,71 @@
+# ============================================================
+# 企业微信管理系统 - Nginx 配置示例
+# 适用于 1Panel / 宝塔 / 手动配置
+# ============================================================
+# 
+# 将 your-domain.com 替换为您的实际域名
+# 复制此配置到 Nginx server 块中
+
+server {
+    listen 80;
+    listen 443 ssl http2;
+    server_name your-domain.com;
+    
+    # SSL 证书（1Panel 自动管理，无需手动配置）
+    # ssl_certificate /path/to/fullchain.pem;
+    # ssl_certificate_key /path/to/privkey.pem;
+    
+    # 网站根目录：指向 public/ 目录
+    root /www/wwwroot/wxwork2026/public;
+    index index.php index.html;
+    
+    # 日志
+    access_log /www/wwwlogs/wxwork2026-access.log;
+    error_log  /www/wwwlogs/wxwork2026-error.log;
+    
+    # 安全：禁止访问敏感文件
+    location ~ /\. {
+        deny all;
+    }
+    location ~ \.env$ {
+        deny all;
+    }
+    location ~ \.sql$ {
+        deny all;
+    }
+    location ~ /(config\.php|composer\.json) {
+        deny all;
+    }
+    location ~ /(src|docs|logs)/ {
+        deny all;
+    }
+    
+    # 静态资源（缓存）
+    location /assets/ {
+        expires 30d;
+        add_header Cache-Control "public, immutable";
+    }
+    
+    # 主路由：所有请求转发到 index.php
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+    
+    # PHP 处理（1Panel 默认使用 PHP-FPM）
+    location ~ \.php$ {
+        # fastcgi_pass unix:/tmp/php-cgi-80.sock;  # PHP 8.0
+        fastcgi_pass unix:/tmp/php-cgi-74.sock;     # 根据实际 PHP 版本调整
+        # 或者：
+        # fastcgi_pass 127.0.0.1:9000;
+        
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+        
+        # 上传大小限制（素材上传可能需要较大值）
+        client_max_body_size 100m;
+        
+        # 超时（回调处理可能需要稍长时间）
+        fastcgi_read_timeout 30s;
+    }
+}

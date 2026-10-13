@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>网站管理中心 v4.0</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta content="" name="description" />
+<meta content="" name="author" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link href="themes/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="themes/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<link href="themes/plugins/uniform/css/uniform.default.css" rel="stylesheet" />
+<link href="themes/css/theme.css" rel="stylesheet" />
+<script src="js/jquery.js"></script>
+<script src="js/common.js"></script>
+</head>
+<body>
+
+<!-- 顶部导航 -->
+<div class="page-header">
+	<div class="page-header-inner clearfix">
+		<div class="page-logo"><a href="index.html"><i class="fa fa-cube" style="margin-right:8px;"></i>管理后台</a><span class="menu-toggler sidebar-toggler"></span></div>
+		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"></a>
+		<ul class="navbar-nav pull-right">
+			<li class="tooltips" data-placement="bottom" data-original-title="客户留言"><a href="message_list.html"><i class="fa fa-bell-o"></i><span class="badge badge-danger">3</span></a></li>
+			<li class="tooltips" data-placement="bottom" data-original-title="网站首页"><a href="#" target="_blank"> <i class="fa fa-home"></i> </a></li>
+			<li class="separator"></li>
+			<li class="dropdown dropdown-hover">
+				<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"><span class="username">管理员</span><img alt="" class="img-circle" src="themes/images/avatar.jpg" /></a>
+				<ul class="dropdown-menu dropdown-menu-default">
+					<li><a href="index.html"><i class="fa fa-user-md"></i>用户管理中心</a></li>
+					<li><a href="login.html" onClick="if (confirm('确定要退出吗？')) return true; else return false;"><i class="fa fa-key"></i>退出登录</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+<div class="page-container clearfix">
+	<div class="page-content-wrapper">
+
+		<!-- 左侧菜单 -->
+		<div class="page-sidebar-wrapper">
+			<div class="page-sidebar navbar-collapse collapse">
+				<ul class="page-sidebar-menu" data-slide-speed="200">
+					<li class="heading"> <i class="fa fa-navicon"></i> 栏目管理</li>
+					<li class="nav-item">
+						<a href="javascript:;" class="nav-toggle"> <i class="fa fa-list"></i> <span class="title">关于我们</span><span class="arrow"></span></a>
+						<ul class="sub-menu">
+							<li class="nav-item"><a href="info_list.html" class="nav-toggle"> <i class="fa fa-caret-right"></i> <span class="title">公司简介</span></a></li>
+							<li class="nav-item"><a href="info_list.html" class="nav-toggle"> <i class="fa fa-caret-right"></i> <span class="title">企业文化</span></a></li>
+							<li class="nav-item"><a href="info_list.html" class="nav-toggle"> <i class="fa fa-caret-right"></i> <span class="title"><b style="color: #FF6B6B">分类管理</b></span> </a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a href="javascript:;" class="nav-toggle"> <i class="fa fa-newspaper-o"></i> <span class="title">新闻动态</span><span class="arrow"></span></a>
+						<ul class="sub-menu">
+							<li class="nav-item"><a href="info_list.html" class="nav-toggle"> <i class="fa fa-caret-right"></i> <span class="title">公司新闻</span></a></li>
+							<li class="nav-item"><a href="info_list.html" class="nav-toggle"> <i class="fa fa-caret-right"></i> <span class="title">行业资讯</span></a></li>
+							<li class="nav-item"><a href="info_list.html" class="nav-toggle"> <i class="fa fa-caret-right"></i> <span class="title"><b style="color: #FF6B6B">分类管理</b></span> </a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a href="javascript:;" class="nav-toggle"> <i class="fa fa-cubes"></i> <span class="title">产品中心</span><span class="arrow"></span></a>
+						<ul class="sub-menu">
+							<li class="nav-item"><a href="info_list.html" class="nav-toggle"> <i class="fa fa-caret-right"></i> <span class="title">产品系列一</span></a></li>
+							<li class="nav-item"><a href="info_list.html" class="nav-toggle"> <i class="fa fa-caret-right"></i> <span class="title">产品系列二</span></a></li>
+							<li class="nav-item"><a href="info_list.html" class="nav-toggle"> <i class="fa fa-caret-right"></i> <span class="title"><b style="color: #FF6B6B">分类管理</b></span> </a></li>
+						</ul>
+					</li>
+					<li class="heading"> <i class="fa fa-navicon"></i> 数据统计</li>
+					<li class="nav-item">
+						<a href="index.html" class="nav-toggle"> <i class="fa fa-dashboard"></i> <span class="title">数据统计面板</span></a>
+					</li>
+					<li class="heading"> <i class="fa fa-navicon"></i> 高级管理</li>
+					<li class="nav-item active">
+						<a href="banner_list.html" class="nav-toggle"> <i class="fa fa-image"></i> <span class="title">Banner管理</span></a>
+					</li>
+					<li class="nav-item">
+						<a href="link_list.html" class="nav-toggle"> <i class="fa fa-link"></i> <span class="title">友情链接</span></a>
+					</li>
+					<li class="heading"> <i class="fa fa-navicon"></i> 系统管理</li>
+					<li class="nav-item">
+						<a href="javascript:;" class="nav-toggle"><i class="fa fa-cogs"></i><span class="title">系统功能</span><span class="arrow"></span> </a>
+						<ul class="sub-menu">
+							<li class="nav-item"><a href="config_base.html" class="nav-toggle"> <i class="fa fa-sun-o"></i> <span class="title">基本设置</span></a></li>
+							<li class="nav-item"><a href="config_advance.html" class="nav-toggle"> <i class="fa fa-wrench"></i> <span class="title">高级设置</span></a></li>
+							<li class="nav-item"><a href="admin_list.html" class="nav-toggle"> <i class="fa fa-user-plus"></i> <span class="title">管理员列表</span></a></li>
+							<li class="nav-item"><a href="record_list.html" class="nav-toggle"> <i class="fa fa-undo"></i> <span class="title">系统操作日志</span></a></li>
+						 </ul>
+					</li>
+					<li class="heading"> <i class="fa fa-navicon"></i> 个人管理</li>
+					<li class="nav-item"><a href="admin_changepass.html" class="nav-toggle"> <i class="fa fa-key"></i> <span class="title">修改口令</span></a></li>
+					<li class="nav-item"><a href="login.html" class="nav-toggle" onClick="if (confirm('确定要退出吗？')) return true; else return false;"> <i class="fa fa-sign-out"></i> <span class="title">退出系统</span></a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 主内容区域 -->
+		<div class="page-content">
+			<ul class="page-breadcrumb breadcrumb">
+				<li><i class="fa fa-home"></i><a href="index.html">首页</a></li>
+				<li><i class="fa fa-angle-right"></i>高级管理</li>
+				<li><i class="fa fa-angle-right"></i><span class="active">Banner编辑</span></li>
+			</ul>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="portlet light edit-panel">
+						<div class="portlet-title">
+							<div class="caption"> <i class="fa fa-edit"></i> <span class="caption-subject uppercase">Banner编辑</span></div>
+							<div class="actions"> <i class="fa fa-angle-left"></i> <a href="banner_list.html">返回列表</a></div>
+						</div>
+						<div class="portlet-body">
+							<form class="form" name="editForm" action="banner_list.html" method="get">
+								<div class="form-body">
+
+									<!-- 基本信息 -->
+									<div class="form-section">
+										<div class="form-section-title"><i class="fa fa-file-text-o"></i><span>基本信息</span></div>
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-8">
+													<label class="control-label">Banner标题 <span style="color:#FF6B6B">*</span></label>
+													<div class="input-icon">
+														<i class="fa fa-header tooltips" data-placement="top" data-original-title="Banner标题"></i>
+														<input type="text" class="form-control" name="title" value="首页Banner-科技创新主题">
+													</div>
+												</div>
+												<div class="col-md-2">
+													<label class="control-label">排序</label>
+													<div class="input-icon">
+														<i class="fa fa-sort-numeric-asc tooltips" data-placement="top" data-original-title="显示顺序"></i>
+														<input type="text" name="sortnum" value="1" class="form-control" />
+													</div>
+												</div>
+												<div class="col-md-2">
+													<label class="control-label">状态</label>
+													<div class="radio-group">
+														<label><input type="radio" name="state" value="1" checked /> 显示</label>
+														<label><input type="radio" name="state" value="0" /> 隐藏</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-6">
+													<label class="control-label">所属位置</label>
+													<select name="position" class="form-control">
+														<option value="1" selected>首页轮播</option>
+														<option value="2">关于我们Banner</option>
+														<option value="3">产品中心Banner</option>
+													</select>
+												</div>
+												<div class="col-md-6">
+													<label class="control-label">链接地址</label>
+													<div class="input-icon">
+														<i class="fa fa-link tooltips" data-placement="top" data-original-title="点击跳转链接"></i>
+														<input type="text" class="form-control" name="url" value="http://www.example.com/news/1.html">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- 图片上传 -->
+									<div class="form-section">
+										<div class="form-section-title"><i class="fa fa-image"></i><span>图片上传</span></div>
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-6">
+													<label class="control-label">PC端Banner图</label>
+													<div class="file-upload-area">
+														<input class="form-control form-file" type="file" name="pic_pc" />
+														<label><input type="checkbox" name="del_pic_pc" value="1"> 删除现有图片</label>
+													</div>
+													<p class="help-block" style="color:#A0AEC0;font-size:12px;margin-top:6px;">建议尺寸：1920 x 600 像素</p>
+												</div>
+												<div class="col-md-6">
+													<label class="control-label">移动端Banner图</label>
+													<div class="file-upload-area">
+														<input class="form-control form-file" type="file" name="pic_mobile" />
+														<label><input type="checkbox" name="del_pic_mobile" value="1"> 删除现有图片</label>
+													</div>
+													<p class="help-block" style="color:#A0AEC0;font-size:12px;margin-top:6px;">建议尺寸：750 x 400 像素</p>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- SEO设置 -->
+									<div class="form-section">
+										<div class="form-section-title"><i class="fa fa-search"></i><span>SEO 设置</span></div>
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-6">
+													<label class="control-label">Alt 属性</label>
+													<div class="input-icon">
+														<i class="fa fa-tag tooltips" data-placement="top" data-original-title="图片Alt描述"></i>
+														<input type="text" class="form-control" name="alt" value="科技创新主题Banner">
+													</div>
+												</div>
+												<div class="col-md-6">
+													<label class="control-label">Title 属性</label>
+													<div class="input-icon">
+														<i class="fa fa-tag tooltips" data-placement="top" data-original-title="图片Title描述"></i>
+														<input type="text" class="form-control" name="img_title" value="点击查看详情">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<div class="form-actions">
+									<button type="submit" class="btn blue"><i class="fa fa-check" style="margin-right:6px"></i>提交保存</button>
+									<button type="reset" class="btn default"><i class="fa fa-refresh" style="margin-right:6px"></i>重置</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 页脚 -->
+<div class="page-footer">
+	<div class="page-footer-inner"> 2026 &copy; 网站管理后台 v4.0 </div>
+</div>
+
+<script src="themes/plugins/jquery.min.js"></script>
+<script src="themes/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="themes/plugins/uniform/jquery.uniform.min.js"></script>
+<script src="themes/js/app.min.js" type="text/javascript"></script>
+<script src="themes/js/layout.min.js" type="text/javascript"></script>
+</body>
+</html>
